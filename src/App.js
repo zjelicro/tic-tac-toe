@@ -6,7 +6,7 @@ import $ from 'jquery';
 
 function App() {
   const [board, setBoard] = useState(["", "","","","","","","",""]);
-  const [player, setPlayer] = useState("O");
+  const [player, setPlayer] = useState("X");
   const [result, setResult] = useState({ winner: "none", state: "none" });
   
   useEffect(() => {
@@ -18,6 +18,8 @@ function App() {
     } else {
       setPlayer("X")  
     }
+
+    // setPlayer(player == "X" ? "0" : "X");
 
   }, [board]);
 
